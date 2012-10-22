@@ -1,0 +1,48 @@
+%% Dokumentenklasse (Koma Script) -----------------------------------------
+\documentclass[%
+   11pt,              % Schriftgroesse
+   ngerman,           % wird an andere Pakete weitergereicht
+   a4paper,           % Seitengroesse
+   DIV11,             % Textbereichsgroesse (siehe Koma Skript Dokumentation !)
+]{scrartcl}%     Klassen: scrartcl, scrreprt, scrbook
+% -------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Font Encoding, benoetigt fuer Umlaute
+\usepackage[ngerman]{babel}   % Spracheinstellung
+
+\usepackage[T1]{fontenc} % T1 Schrift Encoding
+\usepackage{textcomp}    % Zusatzliche Symbole (Text Companion font extension)
+\usepackage{lmodern}     % Latin Modern Schrift
+\usepackage{listings}	 % Einbinden von Quellcode mit 
+\usepackage{framed}      % framed und lstinput
+						 % \begin{framed}
+					 	 % \lstset{language=Java, numbers=left, breaklines=true, showspaces=false, showstringspaces=false, morecomment=[l]{//}, tabsize=2}
+						 % \lstinputlisting{file.java}
+						 % \end{framed}
+
+
+\usepackage[left=2cm,right=3cm,top=2cm,bottom=2cm,includeheadfoot]{geometry} %Ränder
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Kopfzeile links
+\fancyhead[L]{Max Mustermann, 123456 \\ Monika Muster, 000000}
+%Kopfzeile mittig
+\fancyhead[C]{Übung 1 FooBar}
+%Kopfzeile Rechts
+\fancyhf[R]{\today}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%Fußzeile links bzw. innen
+\fancyfoot[L]{}
+%Fußzeile mitte
+\fancyfoot[C]{}
+%Fußzeile rechts bzw. außen
+\fancyfoot[R]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+%% Dokument Beginn %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	foo
+\end{document}
