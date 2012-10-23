@@ -32,3 +32,12 @@ Die `framed`- Umgebung zeichnet lediglich einen Rahmen um den Sourcecode. Mit de
 * **tabsize** Wie viele Leerzeichen ist ein Tab? Für den Druck empfehle ich 2 - nicht so viel Platzverschwendung
 
 Mit dem Befehl `\lstinputlisting` gibt man den Pfad zur Datei an. Das hat den Vorteil, dass bei jedem compile auch der aktuelle Quellcode verwendet wird.
+###Wie schreibe ich etwas über ein anderes Zeichen
+Gerade in Mathe wird häufig verlangt, dass man Axiome oder Beweise über die Gleichheitszeichen (oder andere Symbole) notiert. Das ist mit LaTeX relativ einfach machbar:
+
+	\overset{\text{Text}}{=}
+das war es schon. Es ist nur recht Umständlich jedes mal `overset` zu schreiben. Weil man meist etwas über das `=` schreiben muss, habe ich einen neuen Befehl definiert:
+
+	\newcommand{\equal}[1]{\overset{\text{#1}}{=}}
+	
+ab jetzt kann man das gleiche Ergebnis einfach mit `\equal{Dein Text}` erreichen.
